@@ -1,11 +1,37 @@
-APPLIED ROBOTICS AND AI PROJECT
+C-RAM DESKTOP CAMERA TRACKER
 Assignment 1: Setting up the workspace
 Git workflow: Add, Commit and Push
 Prepared: 20 October 2026
 
 PROJECT LINKS
-GitHub: https://github.com/kingdominick343-dev/applied-robotics-ai-project
+GitHub: https://github.com/kingdominick343-dev/c-ram-desktop-tracker
 Trello: https://trello.com/b/itvwndWJ/applied-robotics-and-ai-project
+
+PROJECT CONTEXT
+The planned project is an educational desktop camera-tracking demonstrator
+with a C-RAM-inspired appearance and no projectile-launching mechanism.
+The first stage will use the laptop webcam and laptop-based Python/OpenCV
+processing. An existing ESP32 is intended to control a future pan/tilt
+assembly. An ESP32-CAM is a later purchase and camera upgrade.
+
+The laptop webcam is fixed to the laptop: turning the separate assembly
+does not turn that camera or automatically center its view. Begin with
+on-screen object tracking; validate the mechanics separately. A later
+camera mounted on the platform enables camera-following experiments.
+The ESP32-CAM upgrade does not by itself make vision processing standalone;
+the laptop remains the planned processing host unless later tests justify
+a change.
+
+An ESP32 and 3D printer are available according to the project discussion.
+Two positional servos, a suitable separate regulated supply, mounting parts,
+and an optional servo driver remain planned hardware; purchases and exact
+specifications need confirmation. The earlier MG996R/PCA9685 suggestions
+are candidates, not validated selections.
+
+Planned milestones: define scope and test object; verify webcam capture;
+prototype on-screen tracking; confirm hardware; validate ESP32 and mechanics;
+design and print the frame; integrate and evaluate; then assess ESP32-CAM.
+Implementation and hardware tests are not yet recorded as complete.
 
 1. ADD: SELECT CHANGES FOR THE NEXT COMMIT
 After creating or editing a file, its changes exist in the working directory.
@@ -56,8 +82,8 @@ have already been executed. Run them in a terminal during the video.
 
 Clone creates a local working copy, including repository history, and sets
 the source repository as the remote named "origin":
-  git clone https://github.com/kingdominick343-dev/applied-robotics-ai-project.git
-  cd applied-robotics-ai-project
+  git clone https://github.com/kingdominick343-dev/c-ram-desktop-tracker.git
+  cd c-ram-desktop-tracker
   git remote -v
 
 Create and switch to a separate branch:
@@ -100,3 +126,5 @@ genuine existing records where available and continue updating both tools.
 [ ] Submit the video and this written discussion through the course system.
 
 The assignment deadline is 20 October 2026 at 11:30 pm.
+This is the workspace-assignment deadline, not the completion date for
+the entire C-RAM desktop camera tracker. Later project dates are to be agreed.
