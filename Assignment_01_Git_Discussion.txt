@@ -1,0 +1,102 @@
+APPLIED ROBOTICS AND AI PROJECT
+Assignment 1: Setting up the workspace
+Git workflow: Add, Commit and Push
+Prepared: 20 October 2026
+
+PROJECT LINKS
+GitHub: https://github.com/kingdominick343-dev/applied-robotics-ai-project
+Trello: https://trello.com/b/itvwndWJ/applied-robotics-and-ai-project
+
+1. ADD: SELECT CHANGES FOR THE NEXT COMMIT
+After creating or editing a file, its changes exist in the working directory.
+The command "git add <file>" copies that file's current changes into Git's
+staging area. Staging lets me choose exactly which changes belong together.
+It does not create a commit or upload anything to GitHub. If I edit the file
+again after staging, I must add it again to include the later changes.
+
+Example:
+  git add README.md
+  git diff --staged
+
+2. COMMIT: RECORD A LOCAL SNAPSHOT
+The command "git commit" records the staged changes in the local repository's
+history. Each commit has an identifier and a message describing the change.
+Meaningful messages make the development history easier to understand.
+A commit is stored locally; creating it does not automatically send it to
+GitHub. Unstaged changes are not included in a normal commit.
+
+Example:
+  git commit -m "Document workspace setup and project workflow"
+
+3. PUSH: SHARE COMMITS WITH THE REMOTE REPOSITORY
+The command "git push" sends local commits and updates the corresponding
+branch on a remote repository, such as GitHub. This makes committed work
+available remotely for backup and collaboration. It requires network access
+and permission to write to the repository. It does not upload uncommitted
+working files. If the remote has diverged, I should fetch and integrate its
+changes before retrying rather than force-pushing without understanding why.
+
+Example for the first push of a feature branch:
+  git push -u origin docs/workspace-demo
+
+THE DIFFERENCE
+Add selects the changes. Commit records those changes locally. Push shares
+the resulting commits remotely.
+
+  Working directory -> git add -> staging area
+  Staging area -> git commit -> local repository history
+  Local repository -> git push -> remote repository on GitHub
+
+Add and Commit can be used offline. Push needs access to the remote.
+Git is the version-control tool; GitHub hosts a remote Git repository.
+
+4. CLONE, EDIT AND BRANCH: DEMONSTRATION WORKFLOW
+The following commands are a demonstration guide, not a claim that they
+have already been executed. Run them in a terminal during the video.
+
+Clone creates a local working copy, including repository history, and sets
+the source repository as the remote named "origin":
+  git clone https://github.com/kingdominick343-dev/applied-robotics-ai-project.git
+  cd applied-robotics-ai-project
+  git remote -v
+
+Create and switch to a separate branch:
+  git switch -c docs/workspace-demo
+
+Edit README.md in a text editor, adding a short, accurate progress note.
+Save it, then inspect, stage, commit and push:
+  git status
+  git diff
+  git add README.md
+  git diff --staged
+  git commit -m "Add verified workspace demonstration progress"
+  git push -u origin docs/workspace-demo
+  git log --oneline -5
+
+Open GitHub and create a pull request from docs/workspace-demo into main.
+Review the changes before merging, and link the pull request to the related
+Trello card. Use a different branch name if this branch already exists.
+
+5. PROJECT MANAGEMENT AND CONTINUOUS USE
+Trello uses To Do, In Progress and Done to show actual task status.
+Move a card to In Progress when work begins and to Done only when its
+acceptance criteria are met. Keep at most two tasks In Progress at once.
+Use descriptions, labels, owners and due dates to clarify responsibilities.
+Link completed work to repository files, commits or pull requests.
+
+Make meaningful commits as work progresses. Retain dated board activity,
+screenshots and short reflections on what worked and what should improve.
+Activity created today cannot demonstrate earlier continuous use; use
+genuine existing records where available and continue updating both tools.
+
+6. VIDEO AND SUBMISSION CHECKLIST
+[ ] Record a 5-10 minute video (maximum 10 minutes).
+[ ] Show the Trello lists, cards, labels, due dates and actual progress.
+[ ] Show the GitHub repository and README.
+[ ] Show lecturer access/invitations for both tools.
+[ ] Demonstrate Clone, Edit, Add, Commit, Push and branching.
+[ ] Explain Add versus Commit versus Push in your own words.
+[ ] Show genuine project history and links between Trello and GitHub.
+[ ] Submit the video and this written discussion through the course system.
+
+The assignment deadline is 20 October 2026 at 11:30 pm.
